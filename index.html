@@ -1,33 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Boltmatter</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        html, body {
-            height: 100%;
-            width: 100%;
-        }
-        body {
-            background: url('image/extended chomatic gradient-background.png') no-repeat center center;
-            background-size: cover;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-        .logo {
-            width: 500px;
-            max-width: 100%;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Boltmatter</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    html, body {
+      height: 100%;
+      width: 100%;
+    }
+    body {
+      background: url('image/extended chomatic gradient-background.png') no-repeat center center;
+      background-size: cover;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .logo {
+      width: 80%;         /* Default scaling for smaller screens */
+      max-width: 500px;   /* Never bigger than 500px */
+      height: auto;       /* Keep the aspect ratio */
+    }
+  </style>
 </head>
 <body>
-    <img src="image/logo--boltmatter.svg" alt="Logo" class="logo">
+  <img src="image/logo--boltmatter.svg" alt="Logo" class="logo">
 </body>
 </html>
