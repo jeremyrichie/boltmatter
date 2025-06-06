@@ -1,14 +1,31 @@
+/* Reset browser defaults */
 html, body {
   height: 100%;
   margin: 0;
   padding: 0;
 }
 
-/* FONTS */
+/* Flex Layout */
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  font-family: 'Ripple Medium', sans-serif;
+  color: #E8EFE8;
+}
+
+/* Fonts */
 @font-face {
   font-family: 'ARCADIA';
-  src: url('../fonts/ARCADIA.woff2') format('woff2'),
-       url('../fonts/ARCADIA.woff') format('woff');
+  src: url('../fonts/ARCADIA.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'ARCADIA';
+  src: url('../fonts/ARCADIA.woff') format('woff');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -16,8 +33,7 @@ html, body {
 
 @font-face {
   font-family: 'Nord Medium';
-  src: url('../fonts/Nord-Medium.woff2') format('woff2'),
-       url('../fonts/Nord-Medium.woff') format('woff');
+  src: url('../fonts/Nord-Medium.woff2') format('woff2');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -25,59 +41,54 @@ html, body {
 
 @font-face {
   font-family: 'Ripple Medium';
-  src: url('../fonts/Ripple-Medium.woff2') format('woff2'),
-       url('../fonts/Ripple-Medium.woff') format('woff');
+  src: url('../fonts/Ripple-Medium.woff2') format('woff2');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
 }
 
-/* BODY */
-body {
-  font-family: 'Ripple Medium', sans-serif;
-  color: #E8EFE8;
-  display: flex;           /* <-- MOVE to its own line */
-  flex-direction: column;
-  min-height: 100vh;        /* full viewport height */
-}
-
-/* CONTENT WRAPPER */
+/* Content Area */
 .content {
   flex: 1;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 1.5rem; /* Space between logo and text */
+  gap: 1.5rem;
+  animation: fadeInUp 1s ease-out forwards;
 }
 
-/* HEADLINE */
+/* Headline */
 .Headline {
   font-family: 'ARCADIA', sans-serif;
   color: #E8EFE8;
   max-width: 600px;
+  text-align: center;
   line-height: 0.75;
   font-size: 6rem;
   text-transform: uppercase;
+  text-shadow: 0 0 10px #c3ff00, 0 0 20px #c3ff00, 0 0 30px #c3ff00;
+  animation: pulseGlow 3s infinite alternate;
 }
 
-/* BLURB */
+/* Blurb */
 .blurb {
   font-family: 'Ripple Medium', sans-serif;
   color: #E8EFE8;
   max-width: 600px;
   line-height: 1.6;
   font-size: 0.95rem;
+  text-align: center;
 }
 
-/* AUDIT FORM */
+/* Audit Form */
 .audit-form {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 0.5rem;
   margin-top: 1.5rem;
-  flex-wrap: wrap; /* Allows it to stack on small screens */
+  flex-wrap: wrap;
 }
 
 .audit-form input[type="email"] {
@@ -102,32 +113,20 @@ body {
   border-radius: 30px;
   border: none;
   background-color: #c3ff00;
-  color: #0B1C3A; /* A dark color for contrast */
+  color: #0B1C3A;
   font-family: 'Nord Medium', sans-serif;
   font-size: 1rem;
   cursor: pointer;
-  transition: background 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 .audit-form button:hover {
-  background-color: #1ae9ff; /* slight hover effect */
+  background-color: #1ae9ff;
   color: #000;
+  transform: scale(1.05);
 }
 
-/* RESPONSIVE AUDIT FORM */
-@media (max-width: 480px) {
-  .audit-form {
-    flex-direction: column;
-  }
-
-  .audit-form input[type="email"],
-  .audit-form button {
-    width: 100%;
-    max-width: 300px;
-  }
-}
-
-/* FOOTER */
+/* Footer */
 .footer {
   width: 100%;
   padding: 1rem 2rem;
@@ -140,7 +139,7 @@ body {
   align-items: center;
 }
 
-/* INSTAGRAM LINK */
+/* Instagram Link */
 .insta-link {
   color: #00E7FF;
   text-decoration: none;
@@ -152,10 +151,36 @@ body {
   color: #c3ff00;
 }
 
-
+/* Mobile Footer Stack */
 @media (max-width: 600px) {
   .footer {
     flex-direction: column;
     text-align: center;
     gap: 0.5rem;
   }
+}
+
+/* Glow Animation */
+@keyframes pulseGlow {
+  0% {
+    text-shadow: 0 0 5px #c3ff00, 0 0 10px #c3ff00, 0 0 20px #c3ff00;
+  }
+  50% {
+    text-shadow: 0 0 15px #c3ff00, 0 0 30px #c3ff00, 0 0 40px #c3ff00;
+  }
+  100% {
+    text-shadow: 0 0 5px #c3ff00, 0 0 10px #c3ff00, 0 0 20px #c3ff00;
+  }
+}
+
+/* Fade-in Animation */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
