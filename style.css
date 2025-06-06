@@ -1,0 +1,116 @@
+
+@font-face {
+  font-family: 'Arcadia'; /* you can name it anything */
+  src: url('../fonts/ARCADIA.woff2') format('woff2'),
+       url('../fonts/ARCADIA.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+
+@font-face {
+  font-family: 'Nord Medium'; /* you can name it anything */
+  src: url('../fonts/Nord-Medium.woff2') format('woff2'),
+       url('../fonts/Nord-Medium.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Ripple Medium'; /* you can name it anything */
+  src: url('../fonts/Ripple-Book.woff2') format('woff2'),
+       url('../fonts/Ripple-Book.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+body {
+  font-family: 'Ripple Medium', sans-serif;
+  color: #E8EFE8;
+}
+
+.content {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem; /* Space between logo and text */
+}
+
+.Headline {
+  font-family: 'ARCADIA', sans-serif;
+  color: #e8efe8;
+  max-width: 600px;
+  line-height: .75;
+  font-size: 6rem;
+  text-transform: uppercase;
+}
+
+.blurb {
+  font-family: 'Ripple Medium', sans-serif;
+  color: #E8EFE8;
+  max-width: 600px;
+  line-height: 1.6;
+  font-size: .95rem;
+}
+
+/* AUDIT FORM */
+
+.audit-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 1.5rem;
+  flex-wrap: wrap; /* allows it to stack on small screens */
+}
+
+.audit-form input[type="email"] {
+  padding: 0.75rem 1rem;
+  border-radius: 30px;
+  border: 2px solid #E8EFE8;
+  background: transparent;
+  color: #E8EFE8;
+  font-family: 'Nord Medium', sans-serif;
+  font-size: 1rem;
+  outline: none;
+  width: 250px;
+}
+
+.audit-form input::placeholder {
+  color: #E8EFE8;
+  opacity: 0.7;
+}
+
+.audit-form button {
+  padding: 0.75rem 1.5rem;
+  border-radius: 30px;
+  border: none;
+  background-color: #c3ff00;
+  color: #0B1C3A; /* A dark color for contrast */
+  font-family: 'Nord Medium', sans-serif;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.audit-form button:hover {
+  background-color: #1ae9ff; /* slight hover effect */
+  color: #000;
+}
+
+@media (max-width: 480px) {
+  .audit-form {
+    flex-direction: column;
+  }
+
+  .audit-form input[type="email"],
+  .audit-form button {
+    width: 100%;
+    max-width: 300px;
+  }
+}
+
