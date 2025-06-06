@@ -34,22 +34,29 @@
 
 
 <body>
-  <div class="content">
-    <img src="image/logo--boltmatter.svg" alt="Logo" class="logo">
-     
-<p class="Headline">A new force built for brands that want more.<br></p>
+ <div class="content">
+ <img 
+  src="image/logo--boltmatter.svg" 
+  srcset="
+    image/logo--boltmatter-mobile.svg 600w, 
+    image/logo--boltmatter.svg 1200w" 
+  sizes="(max-width: 768px) 80vw, 500px"
+  alt="Boltmatter Logo" 
+  class="logo">
 
+  <p class="Headline">A new force built for brands that want more.</p>
 
-    <p class="blurb">
-      We’re growing fast — just like the clients we work with.<br>
-      Ready to see what’s holding your brand back?<br>
-      <strong>Hit us up for a free flash audit and let’s spark something bigger.</strong>
-    </p>
-<form class="audit-form" action="https://formspree.io/f/manjqjqa" method="POST">
-  <input type="email" name="email" placeholder="Enter your email" required>
-  <button type="submit">Get My Flash Audit</button>
-</form>
-  </div>  
+  <p class="blurb">
+    We’re growing fast — just like the clients we work with.<br>
+    Ready to see what’s holding your brand back?<br>
+    <strong>Hit us up for a free flash audit and let’s spark something bigger.</strong>
+  </p>
+
+  <form class="audit-form" action="https://formspree.io/f/manjqjqa" method="POST">
+    <input type="email" name="email" placeholder="Enter your email" required>
+    <button type="submit">Get My Flash Audit</button>
+  </form>
+</div>
 
 
 

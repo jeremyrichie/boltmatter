@@ -1,6 +1,6 @@
 
 @font-face {
-  font-family: 'ARCADIA'; /* you can name it anything */
+  font-family: 'Arcadia'; /* you can name it anything */
   src: url('../fonts/ARCADIA.woff2') format('woff2'),
        url('../fonts/ARCADIA.woff') format('woff');
   font-weight: normal;
@@ -20,8 +20,8 @@
 
 @font-face {
   font-family: 'Ripple Medium'; /* you can name it anything */
-  src: url('../fonts/Ripple-Medium.woff2') format('woff2'),
-       url('../fonts/Ripple-Medium.woff') format('woff');
+  src: url('../fonts/Ripple-Book.woff2') format('woff2'),
+       url('../fonts/Ripple-Book.woff') format('woff');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -112,5 +112,41 @@ body {
     width: 100%;
     max-width: 300px;
   }
+
+.logo {
+  width: 70%;
+  max-width: 500px;
+  height: auto;
+  transition: all 0.5s ease;
 }
+
+
+/* Default: show desktop logo */
+.desktop-logo {
+  display: block;
+  opacity: 1;
+}
+
+.mobile-logo {
+  display: none;
+  opacity: 0;
+}
+
+/* Show mobile logo on smaller screens */
+@media (max-width: 768px) {
+  .desktop-logo {
+    display: none;
+    opacity: 0;
+  }
+
+  .mobile-logo {
+    display: block;
+    opacity: 1;
+    width: 60%;
+    max-width: 300px;
+    height: auto;
+    transform: scale(1.05); /* slight scale up on mobile */
+  }
+
+
 
