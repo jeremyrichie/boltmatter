@@ -4,12 +4,9 @@ html, body {
   padding: 0;
 }
 
-
-
-
-
+/* FONTS */
 @font-face {
-  font-family: 'ARCADIA'; /* you can name it anything */
+  font-family: 'ARCADIA';
   src: url('../fonts/ARCADIA.woff2') format('woff2'),
        url('../fonts/ARCADIA.woff') format('woff');
   font-weight: normal;
@@ -17,9 +14,8 @@ html, body {
   font-display: swap;
 }
 
-
 @font-face {
-  font-family: 'Nord Medium'; /* you can name it anything */
+  font-family: 'Nord Medium';
   src: url('../fonts/Nord-Medium.woff2') format('woff2'),
        url('../fonts/Nord-Medium.woff') format('woff');
   font-weight: normal;
@@ -28,7 +24,7 @@ html, body {
 }
 
 @font-face {
-  font-family: 'Ripple Medium'; /* you can name it anything */
+  font-family: 'Ripple Medium';
   src: url('../fonts/Ripple-Medium.woff2') format('woff2'),
        url('../fonts/Ripple-Medium.woff') format('woff');
   font-weight: normal;
@@ -36,15 +32,18 @@ html, body {
   font-display: swap;
 }
 
+/* BODY */
 body {
   font-family: 'Ripple Medium', sans-serif;
-  color: #E8EFE8;display: flex;
+  color: #E8EFE8;
+  display: flex;           /* <-- MOVE to its own line */
   flex-direction: column;
-  min-height: 100vh; /* full viewport height */
+  min-height: 100vh;        /* full viewport height */
 }
 
+/* CONTENT WRAPPER */
 .content {
- flex: 1;
+  flex: 1;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -52,32 +51,33 @@ body {
   gap: 1.5rem; /* Space between logo and text */
 }
 
+/* HEADLINE */
 .Headline {
   font-family: 'ARCADIA', sans-serif;
-  color: #e8efe8;
+  color: #E8EFE8;
   max-width: 600px;
-  line-height: .75;
+  line-height: 0.75;
   font-size: 6rem;
   text-transform: uppercase;
 }
 
+/* BLURB */
 .blurb {
   font-family: 'Ripple Medium', sans-serif;
   color: #E8EFE8;
   max-width: 600px;
   line-height: 1.6;
-  font-size: .95rem;
+  font-size: 0.95rem;
 }
 
 /* AUDIT FORM */
-
 .audit-form {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 0.5rem;
   margin-top: 1.5rem;
-  flex-wrap: wrap; /* allows it to stack on small screens */
+  flex-wrap: wrap; /* Allows it to stack on small screens */
 }
 
 .audit-form input[type="email"] {
@@ -114,6 +114,7 @@ body {
   color: #000;
 }
 
+/* RESPONSIVE AUDIT FORM */
 @media (max-width: 480px) {
   .audit-form {
     flex-direction: column;
@@ -127,7 +128,6 @@ body {
 }
 
 /* FOOTER */
-
 .footer {
   width: 100%;
   padding: 1rem 2rem;
@@ -140,7 +140,7 @@ body {
   align-items: center;
 }
 
-
+/* INSTAGRAM LINK */
 .insta-link {
   color: #00E7FF;
   text-decoration: none;
