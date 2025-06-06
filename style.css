@@ -151,3 +151,11 @@ body {
   text-decoration: underline;
   color: #c3ff00;
 }
+
+
+@media (max-width: 600px) {
+  .footer {
+    flex-direction: column;
+    text-align: center;
+    gap: 0.5rem;
+  }
