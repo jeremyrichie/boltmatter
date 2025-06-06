@@ -131,15 +131,14 @@ body {
   font-size: 0.875rem;
 }
 
-.footer a.insta-button {
-   color: #1ae9ff;
-  padding: 0.5rem 1rem;
-  border-radius: 30px;
+
+.insta-link {
+  color: #00E7FF;
   text-decoration: none;
   font-weight: bold;
-  font-family: 'Nord Book', sans-serif;
-  }
+}
 
-.footer a.insta-button:hover {
-    color: #c3ff00;
+.insta-link:hover {
+  text-decoration: underline;
+  color: #c3ff00;
 }
