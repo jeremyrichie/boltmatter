@@ -1,3 +1,12 @@
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+
+
+
 
 @font-face {
   font-family: 'ARCADIA'; /* you can name it anything */
@@ -29,14 +38,17 @@
 
 body {
   font-family: 'Ripple Medium', sans-serif;
-  color: #E8EFE8;
+  color: #E8EFE8;display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* full viewport height */
 }
 
 .content {
-  text-align: center;
+ flex: 1;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   gap: 1.5rem; /* Space between logo and text */
 }
 
@@ -119,16 +131,13 @@ body {
 .footer {
   width: 100%;
   padding: 1rem 2rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  background: #0B1C3A; /* Match your background or darker */
+  background: #0B1C3A;
   color: #E8EFE8;
   font-family: 'Nord Medium', sans-serif;
   font-size: 0.875rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 
