@@ -19,8 +19,8 @@
 
 @font-face {
   font-family: 'Ripple Medium';
-  src: url('../fonts/Ripple-Book.woff2') format('woff2'),
-       url('../fonts/Ripple-Book.woff') format('woff');
+  src: url('../fonts/Ripple-Medium.woff2') format('woff2'),
+       url('../fonts/Ripple-Medium.woff') format('woff');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
