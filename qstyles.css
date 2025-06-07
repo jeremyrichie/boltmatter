@@ -1,0 +1,262 @@
+/* Custom Fonts */
+@font-face {
+  font-family: 'Arcadia';
+  src: url('../fonts/ARCADIA.woff2') format('woff2'),
+       url('../fonts/ARCADIA.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Nord Medium';
+  src: url('../fonts/Nord-Medium.woff2') format('woff2'),
+       url('../fonts/Nord-Medium.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Ripple Medium';
+  src: url('../fonts/Ripple-Book.woff2') format('woff2'),
+       url('../fonts/Ripple-Book.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Reset and General */
+body {
+  margin: 0;
+  padding: 50px 20px;
+  font-family: 'Ripple Medium', sans-serif;
+  background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column; /* Center logo and form vertically */
+  align-items: center; /* Center horizontally */
+  justify-content: flex-start; /* Align top */
+}
+
+
+/* Form Container */
+.form-container {
+  background: rgba(20, 20, 30, 0.9);
+  padding: 40px;
+  border-radius: 16px;
+  width: 100%;
+  max-width: 900px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  animation: fadeIn 1s ease;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Typography */
+h1 {
+  text-align: center;
+  font-size: 2em;
+  font-family: 'Nord Medium', sans-serif;
+  color: #b6ff17;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  letter-spacing: 1px;
+}
+h2 {
+  font-family: 'Nord Medium', sans-serif;
+  color: #00f7ff;
+  margin-top: 40px;
+  margin-bottom: 10px;
+  font-size: 1.6em;
+  border-bottom: 2px solid #00ff87;
+  padding-bottom: 5px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* Labels */
+label {
+  display: block;
+  margin-top: 20px;
+  font-family: 'Nord Medium', sans-serif;
+  font-weight: 600;
+  color: #eee;
+  font-size: 1em;
+}
+
+/* Inputs and Textareas */
+input[type="text"],
+input[type="date"],
+textarea {
+  width: 100%;
+  padding: 14px 16px;
+  margin-top: 8px;
+  background: #111;
+  border: 1px solid #333;
+  border-radius: 8px;
+  font-size: 1em;
+  font-family: 'Ripple Medium', sans-serif;
+  color: #eee;
+  transition: all 0.3s ease;
+}
+input[type="text"]:focus,
+input[type="date"]:focus,
+textarea:focus {
+  border-color: #00f7ff;
+  box-shadow: 0 0 5px #00f7ff;
+  outline: none;
+}
+
+/* Checkboxes */
+.checkbox-group {
+  margin-top: 15px;
+}
+.checkbox-group label {
+  display: block;
+  margin: 8px 0;
+  font-family: 'Ripple Medium', sans-serif;
+  font-weight: normal;
+  color: #ccc;
+}
+
+
+/* Email Signup */
+
+.email-signup {
+  margin-top: 30px;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  align-items: center; /* ✅ Vertically center the flex items */
+}
+
+.email-signup input[type="email"] {
+  flex: 1;
+  height: 60px;
+  padding: 0 25px; /* ✅ Only horizontal padding */
+  border-radius: 50px;
+  border: 1px solid #333;
+  background: #111;
+  color: #eee;
+  font-family: 'Ripple Medium', sans-serif;
+  font-size: 1.2em;
+  line-height: 60px; /* ✅ Vertically center text inside */
+  box-sizing: border-box;
+  transition: all 0.3s ease;
+}
+
+.email-signup input[type="email"]::placeholder {
+  color: #888;
+}
+
+.email-signup input[type="email"]:focus {
+  border-color: #00f7ff;
+  box-shadow: 0 0 5px #00f7ff;
+  outline: none;
+}
+
+.email-signup button {
+  height: 60px;
+  padding: 0 30px;
+  background: linear-gradient(90deg, #00ff87, #60efff);
+  border: none;
+  color: #111;
+  font-family: 'Nord Medium', sans-serif;
+  font-size: 1.2em;
+  font-weight: bold;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: transform 0.3s, background 0.3s;
+  white-space: nowrap;
+  display: flex;
+  align-items: center; /* ✅ Vertically center text inside */
+  justify-content: center;
+}
+
+.email-signup button:hover {
+  transform: scale(1.05);
+  background: linear-gradient(90deg, #60efff, #00ff87);
+}
+
+.email-signup button:active {
+  transform: scale(0.98);
+}
+
+/* Logo */
+
+.logo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 40px;
+}
+
+.logo-container img {
+  width: 250px;
+  height: auto;
+  display: block;
+}
+
+@media (max-width: 600px) {
+  .logo-container img {
+    width: 200px;
+  }
+}
+
+
+@media (max-width: 768px) {
+  /* Form container scaling */
+  .form-container {
+    padding: 30px 20px; /* reduce padding */
+  }
+
+  /* Headings smaller */
+  h1 {
+    font-size: 1.6em;
+  }
+
+  h2 {
+    font-size: 1.3em;
+  }
+
+  /* Input and textarea adjustments */
+  input[type="text"],
+  input[type="date"],
+  input[type="email"],
+  textarea {
+    font-size: 1em; /* reduce font size a bit */
+    padding: 12px 14px; /* adjust padding */
+  }
+
+  /* Email signup layout fix */
+  .email-signup {
+    flex-direction: column; /* stack email + button vertically on small screens */
+  }
+
+  .email-signup input[type="email"],
+  .email-signup button {
+    width: 100%;
+  }
+
+  .email-signup button {
+    margin-top: 10px; /* space between input and button */
+  }
+}
+
+@media (max-width: 480px) {
+  /* For really small phones */
+  h1 {
+    font-size: 1.4em;
+  }
+
+  h2 {
+    font-size: 1.1em;
+  }
+}
