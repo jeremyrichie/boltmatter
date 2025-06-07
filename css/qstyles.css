@@ -39,6 +39,15 @@ body {
   justify-content: flex-start; /* Align top */
 }
 
+/* Footer */
+
+.footer {
+  margin-top: 40px;
+  text-align: center;
+  color: #00f7ff;
+  font-size: 0.9em;
+  font-family: 'Ripple Medium', sans-serif;
+}
 
 /* Form Container */
 .form-container {
